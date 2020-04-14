@@ -27,10 +27,10 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
-    car: state.firstReducer.car, 
-    additionalFeatures: state.firstReducer.additionalFeatures,
-    additionalPrice: state.firstReducer.additionalPrice
+    car: state.car, 
+    additionalFeatures: state.additionalFeatures,
+    additionalPrice: state.additionalPrice
   }
 }
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, { buyItem, removeFeature })(App);
